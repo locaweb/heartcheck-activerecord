@@ -9,7 +9,7 @@ module Heartcheck
       def validate
         services.each do |service|
           begin
-            service[:connection].execute 'select 1'
+            service[:connection].execute('select 1')
           rescue
             append_error(service)
           end
