@@ -20,7 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
-You can add a check to activerecord when configure the heartcheck
+You can check any ActiveRecord connection that there's in your app.
+Each service need to respond to `:name` (a indetifier) and `:connection` (an activerecord connection);
 
 ```ruby
 Heartcheck.setup do |config|
