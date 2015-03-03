@@ -4,7 +4,7 @@ require 'heartcheck/activerecord/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'heartcheck-activerecord'
-  spec.version = Heartcheck::ActiveRecord::VERSION
+  spec.version = Heartcheck::Activerecord::VERSION
   spec.authors = ['Locaweb']
   spec.email = ['desenvolvedores@locaweb.com.br']
   spec.summary = 'A activerecord checker'
