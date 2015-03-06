@@ -12,7 +12,7 @@ describe Heartcheck::Checks::Activerecord do
       before do
         conn_settings = {
           adapter: 'sqlite3',
-          database: 'spec/db/test.sqlite3'
+          database: ':memory:'
         }
 
         ActiveRecord::Base.establish_connection(conn_settings)

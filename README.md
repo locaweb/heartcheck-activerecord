@@ -1,5 +1,7 @@
 # Heartcheck::ActiveRecord
 
+[![Build Status](https://travis-ci.org/locaweb/heartcheck-activerecord.svg)](https://travis-ci.org/locaweb/heartcheck-activerecord)
+
 A plugin to check activerecord connection with heartcheck
 
 ## Installation
