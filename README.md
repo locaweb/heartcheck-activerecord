@@ -23,12 +23,15 @@ Or install it yourself as:
 ## Usage
 
 You can check any ActiveRecord connection that there's in your app.
-Each service need to respond to `:name` (an indetifier) and `:connection` (an activerecord connection);
+Each service need to respond to `:name` (an indetifier) and `:connection` (an activerecord connection)
+This service need be added with dynamic service;
 
 ```ruby
 Heartcheck.setup do |config|
   config.add :activerecord do |c|
-    c.add_service(name: 'activerecord', connection: ActiveRecord::Base.connection)
+    c.register_dynamic_services do 
+      [{name: 'activerecord', connection: ActiveRecord::Base.connection}]
+    end
   end
 end
 ```
