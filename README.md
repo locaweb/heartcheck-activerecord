@@ -1,8 +1,9 @@
 # Heartcheck::ActiveRecord
 
 [![Build Status](https://travis-ci.org/locaweb/heartcheck-activerecord.svg)](https://travis-ci.org/locaweb/heartcheck-activerecord)
+[![Code Climate](https://codeclimate.com/github/locaweb/heartcheck-activerecord/badges/gpa.svg)](https://codeclimate.com/github/locaweb/heartcheck-activerecord)
 
-A plugin to check activerecord connection with heartcheck
+##A plugin to check activerecord connection with [heartcheck](https://github.com/locaweb/heartcheck).
 
 ## Installation
 
@@ -35,6 +36,11 @@ Heartcheck.setup do |config|
   end
 end
 ```
+
+### Check Heartcheck example [here](https://github.com/locaweb/heartcheck/blob/master/lib/heartcheck/generators/templates/config.rb)
+
+## License
+* [MIT License](https://github.com/locaweb/heartcheck-activerecord/blob/master/LICENSE.txt)
 
 ## Contributing
 
