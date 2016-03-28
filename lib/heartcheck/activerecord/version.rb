@@ -2,6 +2,6 @@
 module Heartcheck
   # gem version
   module Activerecord
-    VERSION = '0.0.1'
+    VERSION = '0.0.2'
   end
 end
