@@ -27,12 +27,22 @@ describe Heartcheck::Checks::Activerecord do
         subject.validate
         expect(check_errors).to be_empty
       end
+
+      it 'calls close on connection' do
+        expect(conn).to receive(:close).and_call_original
+        subject.validate
+      end
     end
 
     context 'with error' do
       it 'appends default error message' do
         subject.validate
         expect(check_errors).to eq(['Error to use the "Default" connection'])
+      end
+
+      it 'calls close on connection' do
+        expect(conn).to receive(:close).and_call_original
+        subject.validate
       end
 
       it 'appends custom error message' do

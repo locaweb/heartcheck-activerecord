@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    heartcheck-activerecord (0.0.1)
+    heartcheck-activerecord (0.0.2)
       activerecord (>= 3.0.0)
       heartcheck (~> 1.0, >= 1.0)
       net-telnet (~> 0.1.1)
