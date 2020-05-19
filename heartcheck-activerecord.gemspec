@@ -19,14 +19,13 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'net-telnet', '~> 0.1.1'
 
-  spec.add_dependency 'heartcheck', '~> 2.0'
   spec.add_dependency 'activerecord', '>= 3.2', '< 6.0'
+  spec.add_dependency 'heartcheck', '~> 2.0'
 
-  spec.add_development_dependency 'sqlite3'
   spec.add_development_dependency 'pry-nav'
+  spec.add_development_dependency 'redcarpet'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'
-  # for documentation
+  spec.add_development_dependency 'sqlite3'
   spec.add_development_dependency 'yard'
-  spec.add_development_dependency 'redcarpet'
 end
