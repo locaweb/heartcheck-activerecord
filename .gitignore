@@ -18,3 +18,4 @@
 mkmf.log
 *.sqlite3
 *.gem
+.gems/
