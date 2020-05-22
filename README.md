@@ -44,6 +44,12 @@ end
 
 ## Contributing
 
+You can use a CLI script in order to setup the project in your machine. Don't
+worry about ruby versions, or other project dependencies, you just need to have
+docker 19.03 or later installed.
+
+Just run `./scripts/heartcheck help` in order to see the options available
+
 1. Fork it ( https://github.com/locaweb/heartcheck-activerecord/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)

@@ -1,8 +1,7 @@
 #!/bin/bash -e
 
 COMMAND_NAME=$1
-shift
-COMMAND_ARGS=$@
+COMMAND_ARGS=${@:2}
 PROJECT_NAME="heartcheck-activerecord"
 
 docker_run_tty() {
@@ -25,19 +24,26 @@ docker_run() {
 }
 
 case $COMMAND_NAME in
-  "setup")
+  setup)
     docker build --build-arg uid=$EUID -t $PROJECT_NAME:latest .
 
     docker_run bundle install
   ;;
-  "bash")
+  bash)
     docker_run_tty bash
   ;;
-  "*")
+  help)
     echo "A CLI to setup your dev environment"
     echo "Usage:"
     echo "./script/heartcheck OPTIONS"
     echo ""
     echo "setup - prepares your dev environment"
+    echo "bash  - runs a bash inside project's docker container"
+  ;;
+  *)
+    echo "Unknown option $COMMAND_NAME! Check our usage"
+    echo
+
+    $0 help
   ;;
 esac
