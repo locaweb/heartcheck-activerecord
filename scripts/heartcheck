@@ -1,0 +1,49 @@
+#!/bin/bash -e
+
+COMMAND_NAME=$1
+COMMAND_ARGS=${@:2}
+PROJECT_NAME="heartcheck-activerecord"
+
+docker_run_tty() {
+  docker run --rm \
+    --volume $PWD:/heartcheck \
+    --workdir /heartcheck \
+    --env BUNDLE_PATH=/heartcheck/.gems \
+    --interactive --tty \
+    $PROJECT_NAME \
+    $@
+}
+
+docker_run() {
+  docker run --rm \
+    --volume $PWD:/heartcheck \
+    --workdir /heartcheck \
+    --env BUNDLE_PATH=/heartcheck/.gems \
+    $PROJECT_NAME \
+    $@
+}
+
+case $COMMAND_NAME in
+  setup)
+    docker build --build-arg uid=$EUID -t $PROJECT_NAME:latest .
+
+    docker_run bundle install
+  ;;
+  bash)
+    docker_run_tty bash
+  ;;
+  help)
+    echo "A CLI to setup your dev environment"
+    echo "Usage:"
+    echo "./script/heartcheck OPTIONS"
+    echo ""
+    echo "setup - prepares your dev environment"
+    echo "bash  - runs a bash inside project's docker container"
+  ;;
+  *)
+    echo "Unknown option $COMMAND_NAME! Check our usage"
+    echo
+
+    $0 help
+  ;;
+esac
