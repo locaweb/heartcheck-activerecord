@@ -35,6 +35,10 @@ describe Heartcheck::Checks::Activerecord do
     end
 
     context 'with error' do
+      before do
+        ActiveRecord::Base.connection.disconnect!
+      end
+
       it 'appends default error message' do
         subject.validate
         expect(check_errors).to eq(['Error to use the "Default" connection'])

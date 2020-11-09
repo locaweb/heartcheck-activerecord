@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'net-telnet', '~> 0.1.1'
 
-  spec.add_dependency 'activerecord', '>= 3.2', '< 6.0'
+  spec.add_dependency 'activerecord', '>= 3.2', '< 6.1'
   spec.add_dependency 'heartcheck', '~> 2.0'
 
   spec.add_development_dependency 'pry-nav'
@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'sqlite3'
   spec.add_development_dependency 'yard'
 
-  spec.required_ruby_version = '>= 2.3'
+  spec.required_ruby_version = '>= 2.4'
 end
