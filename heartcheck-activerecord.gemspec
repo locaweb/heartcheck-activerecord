@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'net-telnet', '~> 0.1.1'
 
-  spec.add_dependency 'activerecord', '>= 3.2'
+  spec.add_dependency 'activerecord', '>= 3.2', '< 7.0'
   spec.add_dependency 'heartcheck', '~> 2.0'
 
   spec.add_development_dependency 'pry-nav'
