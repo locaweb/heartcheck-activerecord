@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][]
 
+## [0.1.2](https://github.com/locaweb/heartcheck-activerecord/compare/v0.1.1...v0.1.2) - 19-03-2021
+### Added
+  - Support for `activerecord` 6.1 versions and Ruby 3.0
+
 ## [0.1.1](https://github.com/locaweb/heartcheck-activerecord/compare/v0.1.0...v0.1.1) - 19-03-2021
 ### Added
-  - Support for `activerecord` 6.X versions and Ruby 3.0
+  - Support for `activerecord` 6.0 versions
 
 ## [0.1.0](https://github.com/locaweb/heartcheck-activerecord/compare/v0.1.0...v0.0.3) - 22-05-2020
 ### Added
