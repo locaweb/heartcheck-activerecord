@@ -35,7 +35,7 @@ case $COMMAND_NAME in
   help)
     echo "A CLI to setup your dev environment"
     echo "Usage:"
-    echo "./script/heartcheck OPTIONS"
+    echo "./scripts/heartcheck OPTIONS"
     echo ""
     echo "setup - prepares your dev environment"
     echo "bash  - runs a bash inside project's docker container"
