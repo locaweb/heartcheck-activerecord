@@ -10,7 +10,7 @@ jobs:
       RAILS_ENV: test
     services:
       sqlite:
-        image: keinos/sqlite3
+        image: nouchka/sqlite3
 
     strategy:
       matrix:
